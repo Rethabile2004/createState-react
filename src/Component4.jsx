@@ -1,18 +1,16 @@
-//
-// Rethabile Siase
-// Purpose: demonstrate basic useContext() hook in react
-//
+import { MessageContext } from "./Component1";
+import React, {useContext} from 'react';
 
-import { UserContext } from "./Component1.jsx";
-import React,{useContext} from 'react'
-function Component4() {
-    const user=useContext(UserContext);
-  return (
-    <div className="box">
-      <h1>Component 4</h1>
-      <h2>Bye {user}</h2>
-    </div>
-  );
+function Component4(){
+    const message = useContext(MessageContext);
+
+    return (
+        <div className="box">
+            <h4>{message} from Component 4</h4>
+        </div>
+
+    )
 }
-
 export default Component4;
+
+
